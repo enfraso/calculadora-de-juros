@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora de Juros</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+
+        #resultado {
+            margin-top: 10px;
+        }
+
+        #historico {
+            margin-top: 20px;
+        }
+
+        .historico-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+
+        .historico-item button {
+            background-color: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora de Juros</h1>
+    <label for="principal">Valor Principal:</label>
+    <input type="text" value="1000" id="principal">
+
+    <label for="taxa">Taxa de Juros:</label>
+    <input type="text" value="1" id="taxa">
+
+    <label for="periodo">Período (em meses):</label>
+    <input type="text" value="12" id="periodo">
+
+    <label for="aporte">Aporte Mensal:</label>
+    <input type="text" value="0" id="aporte">
+
+    <button onclick="calcularJurosSimples()">Calcular Juros Simples</button>
+    <button onclick="calcularJurosCompostos()">Calcular Juros Compostos</button>
+
+    <h2>Resultado:</h2>
+    <p id="resultado"></p>
+
+    <h2>Histórico:</h2>
+    <div id="historico"></div>
+
+    <script src="calculadora.js"></script>
+</body>
+</html>
